@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.passwordPlaceholder {
+  text-align: center;
+}
+
+.buttons {
+  margin-bottom: 2rem;
+  /* Separating buttons initially */
+}
+
+.content {
+  transition: transform 500ms ease-in-out;
+  /* Adding transition for swipe animation */
+}
+
+.swipe {
+  transform: translateX(-100%);
+  /* Applying swipe animation */
+}
+
+.zoom {
+  animation: zoom-in 500ms ease-in-out;
+  /* Applying zoom animation */
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
