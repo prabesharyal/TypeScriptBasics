@@ -25,6 +25,7 @@ function Encryptor() {
 
             // Encrypt the text using AES with the provided password
             const encryptedData = CryptoJS.AES.encrypt(text, newPassword).toString();
+            
             setEncryptedText(encryptedData);
 
             setError('');
