@@ -8,6 +8,9 @@
   text-align: center;
 }
 
+.buttonButt{
+  margin-bottom: 20px;
+}
 .buttons {
   margin-bottom: 2rem;
   /* Separating buttons initially */

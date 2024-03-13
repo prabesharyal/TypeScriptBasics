@@ -25,8 +25,8 @@ function App() {
   return (
     <>
       <div className={`buttons ${animate ? 'zoom' : ''}`} onTransitionEnd={handleTransitionEnd}>
-        <button onClick={() => handleButtonClick(SelectedButton.Encryptor)}>Encrypt Text</button>
-        <button onClick={() => handleButtonClick(SelectedButton.Decryptor)}>Decrypt Text</button>
+        <button className='buttonButt' onClick={() => handleButtonClick(SelectedButton.Encryptor)}>Encrypt Text</button>
+        <button className='buttonButt' onClick={() => handleButtonClick(SelectedButton.Decryptor)}>Decrypt Text</button>
       </div>
       <div className={`content ${animate ? 'swipe' : ''}`}>
         {selectedButton === SelectedButton.Encryptor && <Encryptor />}

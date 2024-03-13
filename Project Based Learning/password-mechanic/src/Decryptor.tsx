@@ -30,7 +30,7 @@ function Decryptor() {
             const decryptedData = CryptoJS.AES.decrypt(encryptedText, password).toString(CryptoJS.enc.Utf8);
             setDecryptedText(decryptedData);
 
-            setError('');
+            setError('Failed to decrypt the encrypted text');
         } catch (error) {
             console.error('Error decrypting data:', error);
             setError('An error occurred during decryption. Incorrect password or encrypted text.');
