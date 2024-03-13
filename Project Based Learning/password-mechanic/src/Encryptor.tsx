@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import CryptoJS from 'crypto-js';
 
 function Encryptor() {
-    // eslint-disable-next-line prefer-const
-    let [password, setPassword] = useState('');
+    const [password, setPassword] = useState('');
     const [text, setText] = useState('');
     const [encryptedText, setEncryptedText] = useState('');
     const [error, setError] = useState('');
@@ -22,12 +21,10 @@ function Encryptor() {
                 setError('Password and text fields cannot be empty.');
                 return;
             }
-            if (!password) {
-                password = 'password';
-            }
+            const newPassword = password || 'password'
 
             // Encrypt the text using AES with the provided password
-            const encryptedData = CryptoJS.AES.encrypt(text, password).toString();
+            const encryptedData = CryptoJS.AES.encrypt(text, newPassword).toString();
             setEncryptedText(encryptedData);
 
             setError('');

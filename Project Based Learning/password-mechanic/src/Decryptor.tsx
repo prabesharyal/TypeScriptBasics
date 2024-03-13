@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import CryptoJS from 'crypto-js';
 
 function Decryptor() {
-    // eslint-disable-next-line prefer-const
-    let [password, setPassword] = useState('');
+    const [password, setPassword] = useState('');
     const [encryptedText, setEncryptedText] = useState('');
     const [decryptedText, setDecryptedText] = useState('');
     const [error, setError] = useState('');
@@ -19,18 +18,22 @@ function Decryptor() {
     const decryptText = () => {
         try {
             if (!encryptedText) {
-                setError('Password and encrypted text fields cannot be empty.');
+                setError('Encrypted text field cannot be empty.');
                 return;
             }
-            if (!password) {
-                password = 'password';
-            }
+
+            // If password is empty, assign a default value
+            const newPassword = password || 'password';
 
             // Decrypt the encrypted text using AES with the provided password
-            const decryptedData = CryptoJS.AES.decrypt(encryptedText, password).toString(CryptoJS.enc.Utf8);
-            setDecryptedText(decryptedData);
+            const decryptedData = CryptoJS.AES.decrypt(encryptedText, newPassword).toString(CryptoJS.enc.Utf8);
+            setDecryptedText(decryptedData)
+            if (decryptedText!='') {
+                setError('Did you use the correct decryption key ??')
+                return
+            }
+            
 
-            setError('Failed to decrypt the encrypted text');
         } catch (error) {
             console.error('Error decrypting data:', error);
             setError('An error occurred during decryption. Incorrect password or encrypted text.');
