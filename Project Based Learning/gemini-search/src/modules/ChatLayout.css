@@ -1,0 +1,116 @@
+.ai-chat-container {
+    min-width: 500px;
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.geminiSearch {
+    margin-left: 2%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid rgba(12, 110, 240, 0.514);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.geminiSearch:hover {
+    background-color: #d3d3d3;
+    border: 2px solid rgba(0, 117, 92, 0.623);
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.error-message {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffcccc;
+    border: 1px solid #ff3333;
+    border-radius: 5px;
+}
+
+.response {
+    margin-top: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    text-align: justify;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.copyButton {
+    margin-top: -8%;
+    margin-right: 2%;
+    float: right;
+    position: relative;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.63);
+    color: #ffffff;
+    filter: invert();
+    transition: background-color linear 1s;
+}
+
+.copyButton:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.63);
+    filter: none;
+    transition: background-color linear 1s;
+}
+
+.copyButtonimg {
+    height: 10px;
+    border: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .ai-chat-container {
+        display: block;
+        min-width: auto;
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .response {
+        text-align: justify;
+        width: 20rem;
+        margin-left: 4%;
+    }
+
+    input {
+        text-align: center;
+    }
+
+    .geminiSearch {
+        border-radius: 20px;
+        border: 2px solid rgba(12, 110, 240, 0.514);
+    }
+
+    .geminiSearch:hover {
+        background-color: rgba(12, 111, 240, 0.123);
+        border: solid 1px white;
+        color: #fff;
+        border: 2px solid rgba(0, 117, 92, 0.623);
+        transition: background-color 0.3s;
+    }
+}
