@@ -1,0 +1,28 @@
+/* TitleBar.css */
+
+.TitleBar {
+  background: url('chod_pos.jpg'); /* Replace 'chod_pos.jpg' with the path to your background image */
+  background-color: rgba(238, 35, 35, 0.7); /* Grey with 70% opacity */
+  background-blend-mode: color-burn;
+  height: auto; /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.301);
+  color: #ffffff; /* White text */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  margin-bottom: 10px; /* Add some spacing between title and subtitle */
+}
+
+.subtitle {
+    background-color: yellow;
+  color: #000000; /* White text */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+}
+
+/* Adjust font sizes, colors, and other styles as needed */

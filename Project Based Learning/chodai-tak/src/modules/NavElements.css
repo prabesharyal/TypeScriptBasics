@@ -1,0 +1,36 @@
+.navBar {
+  background-color: #ff0000;
+  overflow: hidden;
+}
+
+.navBar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navBar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navBar .home {
+  float: left;
+}
+
+.navBar .recent {
+  float: right;
+}
+
+.navBar .categories {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .navBar .home, .navBar .recent, .navBar .categories {
+    float: none;
+  }
+}
