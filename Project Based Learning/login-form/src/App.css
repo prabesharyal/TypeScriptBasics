@@ -1,0 +1,40 @@
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav ul li {
+  border: 2px solid white;
+  background: #007bff;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 4px 0px 4px 0px;
+  margin: auto auto 10px 90%;
+  transition: linear background 0.2s;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+nav ul li:hover {
+  scale: 1.05;
+  background: rgb(236, 240, 0);
+  transition: linear background 0.2s;
+  color: black !important;
+}
+nav ul li a:hover {
+  color: black !important;
+}
+
+.ErrorMsg {
+  text-align: center;
+  font-family: monospace;
+  font-size: larger;
+  color: red;
+  background: rgba(0, 0, 0, 0.473);
+}
